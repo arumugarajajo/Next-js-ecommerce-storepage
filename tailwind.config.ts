@@ -88,7 +88,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "red-1": "#FF0000",
+        "red-1": "#FEB941",
         "grey-1": "#F7F7F7",
         "grey-2": "#8A8A8A",
       },
@@ -97,4 +97,3 @@ const config: Config = {
   plugins: [require("tailwind-scrollbar-hide")],
 };
 export default config;
-

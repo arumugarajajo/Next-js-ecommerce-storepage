@@ -9,17 +9,17 @@ interface ProductCardProps {
   updateSignedInUser?: (updatedUser: UserType) => void;
 }
 
-const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
+const ProductCard = ({ product, updateSignedInUser }: ProductCardProps) => {
   return (
     <Link
       href={`/products/${product._id}`}
-      className="w-[220px] flex flex-col gap-2"
+      className="w-[300px] flex flex-col gap-2"
     >
       <Image
         src={product.media[0]}
         alt="product"
-        width={250}
-        height={300}
+        width={300}
+        height={250}
         className="h-[250px] rounded-lg object-cover"
       />
       <div>
@@ -28,7 +28,10 @@ const ProductCard = ({ product, updateSignedInUser }: ProductCardProps ) => {
       </div>
       <div className="flex justify-between items-center">
         <p className="text-body-bold">${product.price}</p>
-        <HeartFavorite product={product} updateSignedInUser={updateSignedInUser} />
+        <HeartFavorite
+          product={product}
+          updateSignedInUser={updateSignedInUser}
+        />
       </div>
     </Link>
   );
